@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<title>To TMO or Not To TMO - Screenshots</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFCC" link="#FF9999" vlink="#FF9999" alink="#FF9999">
+
+<p><table border="0" cellspacing="0" cellpadding="5" width="100%"><tr valign="bottom">
+<td style="text-align: center; width: 20%;">&nbsp;</td>
+<td style="text-align: center; width: 60%;"><img src="2tmo-title.jpg"></img></td>
+<td style="text-align: center; width: 20%;">&nbsp;</td>
+</tr></table></p>
+
+<p><center><table border="0" cellspacing="1" cellpadding="2" width="95%"><tr valign="bottom">
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="index.html">Home</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="movie.html">The Movie</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="cast.html">Cast &amp; Crew</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="soundtrack.html">Soundtrack</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="howto.html">How-To Guide</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="screenshots.html">Screenshots</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="https://www.youtube.com/channel/UCHvoItS_0Nmueb0IuZoLSKg" target="_blank">Riley Entertainment</a></td>
+</tr></table></center></p>
+
+<p style="font-family: 'Lucida Sans Unicode', 'Times New Roman', serif; font-size: 11pt; text-align: center;">
+Use the "Previous" and "Next" links below to navigate through the available screenshots.
+</p>
+
+<p><center><table border="0" cellspacing="1" cellpadding="2" width="576"><tr valign="bottom">
+<td id="prevcell" style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-decoration: line-through; text-align: left; width: 20%;"><a href="javascript:prevImage();">Previous</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 8pt; text-align: center; width: 60%;">(JavaScript must be enabled)</td>
+<td id="nextcell" style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-decoration: none; text-align: right; width: 20%;"><a href="javascript:nextImage();">Next</a></td>
+</tr></table></center></p>
+
+<p><center>
+<img id="screenshot" src="screenshots/tmo-screenie-01.jpg" width="576"></img>
+<div id="caption" style="width: 576px;">&nbsp;</div>
+</center></p>
+
+<script type="text/javascript"> <!--
+
+var curImage, maxImage;
+var capArray;
+curImage = 1;
+maxImage = 6;
+capArray = new Array();
+capArray[1] = '<b>TMOMovieMaker</b> works on his first TMO film, following the guidance of the narrator.  Still obviously recognizable as a "The Movies" bedroom, you can see some of the minor rearranging that\'s been done.';
+capArray[2] = 'Uh oh!  Something the narrator\'s said has him annoyed...  Evidence here of my filming technique:  about 75% of this was filmed on my "Empty Space" set.  Get that camera in close to give the illusion he\'s sitting, not standing!';
+capArray[3] = 'TMOMovieMaker enters the "virtual casting office" (a visual metaphor for the TMO forums)...  looks like a busy place!  But will he find the voice actors he\'s looking for?  A brand new prop makes up the interior casting office, built to the same scale as the game\'s Casting Office facility.  All those prospective voice actors are auto-animated props.';
+capArray[4] = 'TMOMovieMaker stops to read a book?  Yes...  Because it\'s time to export!  What could possibly await him when he goes to check out whether the export was successful...';
+capArray[5] = 'A little snippet from his film: a murder mystery!  Will the film turn out the way he expects?  Will <i>you</i> be able to solve who the killer is?';
+capArray[6] = 'The old scrolling credits technique, using a high-resolution backdrop on the blue-screen...  B...b...bu...b...bu...but that\'s not all folks!  Stay tuned after the credits roll for a special sequence...';
+
+function setImage() {
+	var imgFilename;
+	imgFilename = curImage;
+	if ( imgFilename < 10 ) imgFilename = '0' + curImage;
+	imgFilename = 'screenshots/tmo-screenie-' + imgFilename + '.jpg';
+	document.getElementById('screenshot').src = imgFilename;
+	document.getElementById('caption').innerHTML = capArray[curImage];
+}
+
+function prevImage() {
+	curImage--;
+	if ( curImage < 1 ) curImage = 1;
+	document.getElementById('prevcell').style.textDecoration = 'none';
+	document.getElementById('nextcell').style.textDecoration = 'none';
+	if ( curImage == 1 ) document.getElementById('prevcell').style.textDecoration = 'line-through';
+	setImage();
+}
+
+function nextImage() {
+	curImage++;
+	if ( curImage > maxImage ) curImage = maxImage;
+	document.getElementById('prevcell').style.textDecoration = 'none';
+	document.getElementById('nextcell').style.textDecoration = 'none';
+	if ( curImage == maxImage ) document.getElementById('nextcell').style.textDecoration = 'line-through';
+	setImage();
+}
+
+setImage();
+
+// -->
+</script>
+
+</body>
+</html>
