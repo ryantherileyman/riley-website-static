@@ -1,0 +1,87 @@
+
+body {
+	background: #000080 url('../images/r3-site-backdrop-deepblue.gif') no-repeat;
+	margin: 0px;
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 11pt;
+	color: #162955;
+}
+
+header.pageHeader,
+section.pageContent,
+footer.pageFooter {
+	margin-left: 96px;
+	margin-right: 96px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	padding: 0em 0.25em;
+	background: #fff8eb;
+}
+
+header.pageHeader {
+	margin-top: 0px;
+	margin-bottom: 14px;
+	border-bottom: 2px solid black;
+	height: 88px;
+}
+header.pageHeader div.siteTitle {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 32pt;
+	padding: 0.15em 0.2em 0em 0.2em;
+	border-bottom: 2px solid #162955;
+	margin-bottom: 0px;
+}
+header.pageHeader div.tagLine {
+	font-style: italic;
+	text-align: right;
+}
+
+section.pageContent {
+	border-top: 2px solid black;
+	padding-bottom: 1em;
+}
+
+nav.pageNavigation ul {
+	font-size: 11pt;
+	font-variant: small-caps;
+	text-align: center;
+	padding: 0.2em 0em;
+	background: #ffe8cb;
+}
+nav.pageNavigation ul li {
+	display: inline;
+}
+nav.pageNavigation ul li.currentlyViewing {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+nav.pageNavigation ul li a {
+	padding: 0.2em 3em;
+	color: #162955;
+	text-decoration: none;
+}
+nav.pageNavigation ul li a:hover {
+	background: #162955;
+	color: #ffe8cb;
+}
+
+section.pageContent article {
+	margin: 0.25em 0.5em 0.75em 0.5em;
+	border: 2px solid #ffe8cb;
+	border-radius: 5px;
+	padding: 0em 0.5em;
+}
+section.pageContent article h1 {
+	font-family: Cambria, "Times New Roman", serif;
+	font-size: 20pt;
+	margin: 0.5em 0em;
+	border-bottom: 1px solid #162955;
+}
+section.pageContent article h2 {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 16pt;
+	margin: 0.5em 0em;
+}
+section.pageContent article p {
+	margin: 0.5em 0em;
+}
