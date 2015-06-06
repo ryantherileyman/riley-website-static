@@ -1,0 +1,98 @@
+<html>
+
+<head>
+<title>For My Fellow Soldier - SCREENSHOTS</title>
+</head>
+
+<body bgcolor="#000000" text="#E0E0F7" link="#F7E0E0" vlink="#F7E0E0" alink="#F7E0E0">
+
+<p><table border="0" cellspacing="0" cellpadding="5" width="100%"><tr valign="bottom">
+<td style="text-align: center; width: 20%;">&nbsp;</td>
+<td style="text-align: center; width: 60%;"><img src="fmfs-title.jpg"></img></td>
+<td style="text-align: center; width: 20%;">&nbsp;</td>
+</tr></table></p>
+
+<p><center><table border="0" cellspacing="1" cellpadding="2" width="95%"><tr valign="bottom">
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="index.html">Home</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="movie.html">The Movie</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="cast.html">Cast &amp; Crew</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="characters.html">Characters</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="soundtrack.html">Soundtrack</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="teaser1.html">Teasers</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="screenshots.html">Screenshots</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-align: center;"><a href="https://www.youtube.com/channel/UCHvoItS_0Nmueb0IuZoLSKg" target="_blank">Riley Entertainment</a></td>
+</tr></table></center></p>
+
+<p style="font-family: 'Lucida Sans Unicode', 'Times New Roman', serif; font-size: 11pt; text-align: center;">
+Use the "Previous" and "Next" links below to navigate through the available screenshots.
+</p>
+
+<p><center><table border="0" cellspacing="1" cellpadding="2" width="640"><tr valign="bottom">
+<td id="prevcell" style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-decoration: line-through; text-align: left; width: 20%;"><a href="javascript:prevImage();">Previous</a></td>
+<td style="font-family: 'Verdana', sans-serif; font-size: 8pt; text-align: center; width: 60%;">(JavaScript must be enabled)</td>
+<td id="nextcell" style="font-family: 'Verdana', sans-serif; font-size: 10pt; text-decoration: none; text-align: right; width: 20%;"><a href="javascript:nextImage();">Next</a></td>
+</tr></table></center></p>
+
+<p><center>
+<img id="screenshot" src="hon-screen01.jpg" width="640" height="360"></img>
+<div id="caption" style="width: 640px;">&nbsp;</div>
+</center></p>
+
+<script type="text/javascript"> <!--
+
+var curImage, maxImage;
+var capArray;
+curImage = 1;
+maxImage = 14;
+capArray = new Array();
+capArray[1] = 'Scene 8<br>Lance and his squad-mates travel on foot to Saint-Lambert-sur-Dives.';
+capArray[2] = 'Scene 8<br>Lance springs forward on the battlefield, with Cooper close behind.';
+capArray[3] = 'Scene 6<br>The squad is stationed in Caen, France as they await their final orders.';
+capArray[4] = 'Scene 4<br>Lance\'s wife, Stephanie, waits alone.';
+capArray[5] = 'Scene 5<br>Back in England, the squad have been issued their Thompsons, and look forward to their new mission.';
+capArray[6] = 'Scene 4<br>Lance walks with Major Mayweather as he is told how the war is progressing.';
+capArray[7] = 'Scene 3<br>Sergeant Norfolk looks back, as a Brigadier General welcomes Major Mayweather at the door.';
+capArray[8] = 'Closing Credits<br>The flags of those countries involved in the Normandy campaign,<br>as they appear at the monument in Saint-Lambert-sur-Dives, France.';
+capArray[9] = 'Scene 5<br>Lance and Stephanie share a moment together before Lance\'s deployment.';
+capArray[10] = 'Scene 5<br>Lance meets his new squad-mates:<br>Corporal Carl Devin, Private David Cooper, and Private Alex Serbin.';
+capArray[11] = 'Scene 7<br>Sergeant Norfolk explains the squad\'s latest orders.';
+capArray[12] = 'Scene 10<br>Corporal Devin desperately rushes across a street in ruins, as a German sniper targets him.';
+capArray[13] = 'Scene 12<br>Stephanie reads a letter from Lance.';
+capArray[14] = 'Riley\'s Scene Notes<br>An illustration of Riley\'s insanity.<br>Careful notes were taken to craft every scene in the film,<br>in order to ensure scenes flowed well and were synchronized to the music.';
+
+function setImage() {
+	var imgFilename;
+	imgFilename = curImage;
+	if ( imgFilename < 10 ) imgFilename = '0' + curImage;
+	imgFilename = 'hon-screen' + imgFilename + '.jpg';
+	document.getElementById('screenshot').src = imgFilename;
+	document.getElementById('caption').innerHTML = capArray[curImage];
+}
+
+function prevImage() {
+	curImage--;
+	if ( curImage < 1 ) curImage = 1;
+	document.getElementById('prevcell').style.textDecoration = 'none';
+	document.getElementById('nextcell').style.textDecoration = 'none';
+	if ( curImage == 1 ) document.getElementById('prevcell').style.textDecoration = 'line-through';
+	setImage();
+}
+
+function nextImage() {
+	curImage++;
+	if ( curImage > maxImage ) curImage = maxImage;
+	document.getElementById('prevcell').style.textDecoration = 'none';
+	document.getElementById('nextcell').style.textDecoration = 'none';
+	if ( curImage == maxImage ) document.getElementById('nextcell').style.textDecoration = 'line-through';
+	setImage();
+}
+
+setImage();
+
+// -->
+</script>
+
+<p style="font-family: 'Lucida Sans Unicode', 'Times New Roman', serif; font-size: 14pt; color: #E0E0F7; text-align: center;"><a href="../../../index.html">The Riley Programming Site</a></p>
+
+</body>
+</html>
