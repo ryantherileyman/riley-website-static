@@ -307,7 +307,7 @@ rileyman.blog.createBlogPostArticleFromXml = function(xmlBlogPost) {
 		formLabelDiv.innerHTML = rileyman.blog.getResource('blogPost.commenterUsername.label');
 		
 		var inputElement = document.createElement('input');
-		inputElement.type = 'textbox';
+		inputElement.type = 'text';
 		inputElement.className = 'commenterUsername';
 		
 		var formControlDiv = document.createElement('div');
