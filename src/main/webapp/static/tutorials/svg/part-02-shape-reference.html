@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>The Riley Programming Website - SVG Tutorial</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-site-screen.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-tutorial-svg.css" />
+
+<style type="text/css">
+	h3 {
+		clear: both;
+	}
+	div.svgSample {
+		float: right;
+	}
+	div.svgSample figure {
+		border: 1px dotted black;
+	}
+	div.svgSample figcaption {
+		text-align: center;
+	}
+	svg {
+		stroke: black;
+		fill: yellow;
+	}
+</style>
+
+<body>
+	
+	<header class="pageHeader">
+		<div class="siteTitle">The Riley Programming Site</div>
+		<div class="tagLine">Exploring vector graphics on the web...</div>
+	</header>
+	
+	<section class="pageContent">
+		
+		<nav class="pageNavigation">
+			<ul>
+				<li><a href="../../../index.html">Home</a></li>
+				<li><a href="../../../blog.html">Blog</a></li>
+				<li class="currentlyViewing"><a href="javascript:void(0);">Tutorials</a></li>
+				<li><a href="../../../movies.html">Movies</a></li>
+				<li><a href="../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	
+		<div class="leftPanel">
+			<article>
+				<h2>SVG Shape Reference</h2>
+				<p>
+					The SVG specification provides all the basic shapes needed to render two-dimensional vector graphics.
+					Most shapes are drawn with a pen, and have a group of styles related to that pen.
+					Shapes that have a region also have a group of styles related to how they get filled.
+				</p>
+				
+				<h3>Lines</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<line x1="-80" y1="-30" x2="80" y2="30"></line>
+						</svg>
+						<figcaption>line</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>line</b> tag draws a line from one point to another.
+				</p>
+				<ul>
+					<li><b>x1</b> - Horizontal position of the first point.</li>
+					<li><b>y1</b> - Vertical position of the first point.</li>
+					<li><b>x2</b> - Horizontal position of the second point.</li>
+					<li><b>y2</b> - Vertical position of the second point.</li>
+				</ul>
+				
+				<h3>Rectangles</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<rect x="-80" y="-30" width="160" height="60" rx="10" ry="10"></rect>
+						</svg>
+						<figcaption>rect</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>rect</b> tag draws a rectangle beginning at some point, with a given width and height.
+				</p>
+				<ul>
+					<li><b>x</b> - Horizontal position of the starting point.</li>
+					<li><b>y</b> - Vertical position of the starting point.</li>
+					<li><b>width</b> - Width of the rectangle.</li>
+					<li><b>height</b> - Height of the rectangle.</li>
+					<li><b>rx</b> - Horizontal radius of the rounded corners.  This is an optional parameter.</li>
+					<li><b>ry</b> - Vertical radius of the rounded corners.  This is an optional parameter.</li>
+				</ul>
+				
+				<h3>Polygons</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<polygon points="-50,0 0,-50 50,0 0,50"></polygon>
+						</svg>
+						<figcaption>polygon</figcaption>
+					</figure>
+				</div>
+				<p>
+					There are two tags that can be used to draw polygons.
+					The <b>polyline</b> tag draws a sequence of lines, but does not draw a final line back to the first point.
+					The <b>polygon</b> tag does draw a line back to the first point.
+				</p>
+				<ul>
+					<li>
+						<b>points</b> - List of points along the polygon.
+						Separate the x and y of each point with a comma, and separate each point with a space.
+					</li>
+				</ul>
+				
+				<h3>Circles</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<circle cx="0" cy="0" r="50"></circle>
+						</svg>
+						<figcaption>circle</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>circle</b> tag draws a circle centered at some point, with a given radius.
+				</p>
+				<ul>
+					<li><b>cx</b> - Horizontal position of the center point.</li>
+					<li><b>cy</b> - Vertical position of the center point.</li>
+					<li><b>r</b> - Radius.</li>
+				</ul>
+				
+				<h3>Ellipse</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<ellipse cx="0" cy="0" rx="40" ry="60"></circle>
+						</svg>
+						<figcaption>ellipse</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>ellipse</b> tag draws an ellipse centered at some point, with a given horizontal and vertical radius.
+				</p>
+				<ul>
+					<li><b>cx</b> - Horizontal position of the center point.</li>
+					<li><b>cy</b> - Vertical position of the center point.</li>
+					<li><b>rx</b> - Horizontal radius.</li>
+					<li><b>ry</b> - Vertical radius.</li>
+				</ul>
+				
+				<h3>Images</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<image x="-80" y="-30" width="160" height="60" xlink:href="../../images/smilies/face_tongue.gif"></image>
+						</svg>
+						<figcaption>image</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>image</b> tag draws a referenced image beginning at some point, with a given width and height.
+					Note that if the SVG specifies to preserve aspect ratio, then the image will preserve aspect ratio as well.
+				</p>
+				<ul>
+					<li><b>x</b> - Horizontal position of the starting point.</li>
+					<li><b>y</b> - Vertical position of the starting point.</li>
+					<li><b>width</b> - Width of the image.</li>
+					<li><b>height</b> - Height of the image.</li>
+				</ul>
+				
+				<h3>Paths</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="65" height="65"
+							viewBox="-100,-100 200,200"
+						>
+							<path d="M-60,0 L0,-60 L60,0 A60,20 0 0,1 -60,0"></path>
+						</svg>
+						<figcaption>path</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>path</b> tag uses a draw string for lines, arcs, and curves.
+					This tag can be used to draw any of the previous shapes above (except referenced images), or combine them together.
+					It is the most flexible SVG shape available, and deserves a reference page of its own.
+				</p>
+				<ul>
+					<li><b>d</b> - Draw string, specifying a series of commands.</li>
+				</ul>
+				
+				<h3>Pen CSS Properties</h3>
+				<p>
+					The CSS properties related to the pen affect all shapes (except referenced images).
+				</p>
+				<ul>
+					<li>
+						<b>stroke</b>
+						<span>- Specifies the pen colour.  The default is black.</span>
+					</li>
+					<li>
+						<b>stroke-width</b>
+						<span>- Specifies the width of the pen.  The default is one unit (one "pixel").</span>
+					</li>
+					<li>
+						<b>stroke-opacity</b>
+						<span>- Specifies the opacity of the pen.  The default is 1.  Valid values are between 0 and 1.</span>
+					</li>
+					<li>
+						<b>stroke-linecap</b>
+						<span>
+							- Specifies how the ends of lines are rendered.
+							The default is <b>butt</b>, which cuts off the end of the line exactly where it ends.
+							A value of <b>square</b> draws a square end.
+							A value of <b>round</b> draws a semi-circle end.
+						</span>
+					</li>
+					<li>
+						<b>stroke-linejoin</b>
+						<span>
+							- Specifies how the join points of two lines are rendered.
+							A value of <b>miter</b> causes the end to render itself to a corner.  Each browser renders a miter in slightly different ways.
+							A value of <b>bevel</b> causes the end to cut off as an edge.
+							A value of <b>round</b> causes the end to render as a rounded edge.
+						</span>
+					</li>
+					<li>
+						<b>stroke-miterlimit</b>
+						<span>
+							- If the <b>stroke-linejoin</b> is set to <b>miter</b>, specifies the limit at which the line join renders as a miter instead of a bevel.
+							If the length of the miter would be shorter than this value, it renders as a bevel.
+							Valid values begin at 1.0, or above.
+						</span>
+					</li>
+					<li>
+						<b>stroke-dasharray</b>
+						<span>
+							- Specifies a series of values that indicate the dashed pattern of the line.
+							Each number specifies the length of that portion of the pattern, with alternating numbers pressing versus lifting the pen.
+						</span>
+					</li>
+					<li>
+						<b>stroke-dashoffset</b>
+						<span>- Specifies the length at which the dashed pattern begins.</span>
+					</li>
+				</ul>
+				
+				<h3>Examples for stroke-linecap</h3>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke-width: 20px;"></line>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke: red;"></line>
+							</svg>
+							<figcaption>
+								Default line cap
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke-width: 20px; stroke-linecap: butt;"></line>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke: red;"></line>
+							</svg>
+							<figcaption>
+								butt
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke-width: 20px; stroke-linecap: square;"></line>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke: red;"></line>
+							</svg>
+							<figcaption>
+								square
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke-width: 20px; stroke-linecap: round;"></line>
+								<line x1="-35" y1="30" x2="35" y2="-30" style="stroke: red;"></line>
+							</svg>
+							<figcaption>
+								round
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Examples for stroke-linejoin (small angle)</h3>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke-width: 20px; fill: none;"></polyline>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								Default line join
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke-width: 20px; fill: none; stroke-linejoin: bevel;"></polyline>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								bevel
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke-width: 20px; fill: none; stroke-linejoin: miter;"></polyline>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								miter
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke-width: 20px; fill: none; stroke-linejoin: round;"></polyline>
+								<polyline points="-30,-10 0,-25 30,-10" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								round
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Examples for stroke-linejoin (large angle)</h3>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,30 0,-40 30,30" style="stroke-width: 20px; fill: none;"></polyline>
+								<polyline points="-30,30 0,-40 30,30" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								Default line join
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,30 0,-40 30,30" style="stroke-width: 20px; fill: none; stroke-linejoin: bevel;"></polyline>
+								<polyline points="-30,30 0,-40 30,30" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								bevel
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,30 0,-40 30,30" style="stroke-width: 20px; fill: none; stroke-linejoin: miter;"></polyline>
+								<polyline points="-30,30 0,-40 30,30" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								miter
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,30 0,-40 30,30" style="stroke-width: 20px; fill: none; stroke-linejoin: round;"></polyline>
+								<polyline points="-30,30 0,-40 30,30" style="stroke: red; fill:none;"></polyline>
+							</svg>
+							<figcaption>
+								round
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Fill CSS Properties</h3>
+				<p>
+					The CSS properties related to how shapes are filled are described below.
+				</p>
+				<ul>
+					<li>
+						<b>fill</b>
+						<span>- Specifies the colour used to fill the shape.</span>
+					</li>
+					<li>
+						<b>fill-opacity</b>
+						<span>- Specifies the opacity of the fill colour.  The default is 1.  Valid values are between 0 and 1.</span>
+					</li>
+					<li>
+						<b>fill-rule</b>
+						<span>
+							- Determines how complex shapes are filled.
+							A point inside the shape will fill based on the number of times a ray drawn from that point to infinity crosses an edge of the shape.
+							A value of <b>nonzero</b> indicates it will fill so long as the ray crosses the edge of the shape.
+							A value of <b>evenodd</b> indicates it will fill only if the ray crosses the edge an odd number of times.
+						</span>
+					</li>
+				</ul>
+				
+				<h3>Examples for fill-rule</h3>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polygon points="-20,30 0,-30 20,30 -30,-10 30,-10" style="fill-rule: nonzero;"></polyline>
+							</svg>
+							<figcaption>
+								nonzero
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polygon points="-20,30 0,-30 20,30 -30,-10 30,-10" style="fill-rule: evenodd;"></polyline>
+							</svg>
+							<figcaption>
+								evenodd
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<p style="clear:both;">
+					The next article will act as a reference for the commands available in the path draw string.
+				</p>
+				
+				<div class="guideNavigationArea">
+					<div class="previousArticle">
+						<a href="part-01-coordinates.html">Previous: SVG Co-ordinate System</a>
+					</div>
+					<div class="nextArticle">
+						<a href="part-03-path-reference.html">Next: Path Reference</a>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</article>
+		</div>
+		
+		<div class="rightPanel">
+			
+			<section class="miniPanel">
+				<h2>SVG Tutorial and Reference</h2>
+				<p><a href="index.html">Introduction to SVG</a></p>
+				<p><a href="part-01-coordinates.html">SVG Co-ordinate System</a></p>
+				<p><a href="javascript:void(0);">Shape Reference</a></p>
+				<p><a href="part-03-path-reference.html">Path Reference</a></p>
+			</section>
+			
+		</div>
+		
+		<footer></footer>
+		
+	</section>
+	
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>The Riley Programming Website - SVG Tutorial</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-site-screen.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-tutorial-svg.css" />
+
+<style type="text/css">
+	table.svgPathReference {
+		border: 1px solid grey;
+		border-spacing: 0px;
+		width: 100%;
+	}
+	table.svgPathReference tr {
+		vertical-align: top;
+	}
+	table.svgPathReference th {
+		border-bottom: 1px solid grey;
+	}
+	table.svgPathReference tr.finalCommandInGroup td {
+		border-bottom: 1px solid lightgrey;
+	}
+	table.svgPathReference td.command,
+	table.svgPathReference th.command,
+	table.svgPathReference td.params,
+	table.svgPathReference th.params {
+		text-align: center;
+	}
+	table.svgPathReference td.description,
+	table.svgPathReference th.description {
+		text-align: left;
+	}
+</style>
+
+<body>
+	
+	<header class="pageHeader">
+		<div class="siteTitle">The Riley Programming Site</div>
+		<div class="tagLine">Exploring vector graphics on the web...</div>
+	</header>
+	
+	<section class="pageContent">
+		
+		<nav class="pageNavigation">
+			<ul>
+				<li><a href="../../../index.html">Home</a></li>
+				<li><a href="../../../blog.html">Blog</a></li>
+				<li class="currentlyViewing"><a href="javascript:void(0);">Tutorials</a></li>
+				<li><a href="../../../movies.html">Movies</a></li>
+				<li><a href="../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		
+		<div class="leftPanel">
+			<article>
+				<h2>SVG Path Reference</h2>
+				<p>
+					The <b>path</b> tag is capable of drawing arbitrarily complex shapes.
+					This is accomplished with a draw string that specifies a sequence of pen-related actions.
+					Actions include moving, drawing lines, drawing arcs, and drawing bezier curves.
+					Each type of action available begins with a command letter, and is followed by various kinds of co-ordinate information.
+					Separate each action by a space.
+				</p>
+				<p>
+					In general, command letters in upper-case indicate absolute co-ordinates.
+					Command letters in lower-case indicate relative co-ordinates (compared to the current pen position).
+				</p>
+				<table class="svgPathReference">
+					<thead>
+						<tr>
+							<th class="command">Command</th>
+							<th class="params">Parameters</th>
+							<th class="description">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="command">M</td>
+							<td class="params">x,y</td>
+							<td class="description">
+								Lifts the pen, and moves it to the specified point.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">m</td>
+							<td class="params">dx,dy</td>
+							<td class="description">
+								Lifts the pen, and moves it by the specified distance horizontally and vertically.
+							</td>
+						</tr>
+						<tr>
+							<td class="command">L</td>
+							<td class="params">x,y</td>
+							<td class="description">
+								Draws a line from the current position, to the specified point.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">l</td>
+							<td class="params">dx,dy</td>
+							<td class="description">
+								Draws a line from the current position, to a point the specified distance away horizontally and vertically.
+							</td>
+						</tr>
+						<tr>
+							<td class="command">H</td>
+							<td class="params">x</td>
+							<td class="description">
+								Draws a horizontal line from the current position, to the specified horizontal location.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">h</td>
+							<td class="params">dx</td>
+							<td class="description">
+								Draws a horizontal line from the current position, to a point the specified distance away horizontally.
+							</td>
+						</tr>
+						<tr>
+							<td class="command">V</td>
+							<td class="params">y</td>
+							<td class="description">
+								Draws a vertical line from the current position, to the specified vertical location.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">v</td>
+							<td class="params">dy</td>
+							<td class="description">
+								Draws a vertical line from the current position, to a point the specified distance away vertically.
+							</td>
+						</tr>
+						<tr>
+							<td class="command">C</td>
+							<td class="params">c1x,c1y c2x,c2y x,y</td>
+							<td class="description">
+								Draws a cubic bezier curve from the current position, ending at the specified x,y point, and using the two control points.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">c</td>
+							<td class="params">c1dx,c1dy c2dx,c2dy dx,dy</td>
+							<td class="description">
+								Draws a cubic bezier curve from the current position, ending at a point the specified distance away horizontally and vertically, and using the two control points (each relative to the starting position).
+							</td>
+						</tr>
+						<tr>
+							<td class="command">S</td>
+							<td class="params">cx,cy x,y</td>
+							<td class="description">
+								Draws a smooth cubic bezier curve from the current position, ending at the specified x,y point, and using a single control point.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">s</td>
+							<td class="params">cdx,cdy dx,dy</td>
+							<td class="description">
+								Draws a smooth cubic bezier curve from the current position, ending at a point the specified distance away horizontally and vertically, and using a single control point (relative to the starting position).
+							</td>
+						</tr>
+						<tr>
+							<td class="command">Q</td>
+							<td class="params">cx,cy x,y</td>
+							<td class="description">
+								Draws a quadratic bezier curve from the current position, ending at the specified x,y point, and using the specified control point.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">q</td>
+							<td class="params">cdx,cdy dx,dy</td>
+							<td class="description">
+								Draws a quadratic bezier curve from the current position, ending at a point the specified distance away horizontally and vertically, and using the specified control point (relative to the starting position).
+							</td>
+						</tr>
+						<tr>
+							<td class="command">T</td>
+							<td class="params">x,y</td>
+							<td class="description">
+								Draws a smooth quadratic bezier curve from the current position, ending at the specified x,y point.
+								The control point is located at a position that is the reflection of the previous control point, around the previous point on the path.
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">t</td>
+							<td class="params">dx,dy</td>
+							<td class="description">
+								Draws a smooth quadratic bezier curve from the current position, ending at a point the specified distance away horizontally and vertically.
+							</td>
+						</tr>
+						<tr>
+							<td class="command">A</td>
+							<td class="params">rx,ry xAxisRotate LargeArcFlag,SweepFlag x,y</td>
+							<td class="description">
+								Draws an elliptical arc starting at the current position, ending at the specified x,y point, and having the specified horizontal and vertical radius.
+								LargeArcFlag indicates whether the smallest (0) or largest (1) arc should be drawn.
+								SweepFlag indicates whether to draw the arc counter-clockwise (0) or clockwise (1).
+								xAxisRotate currently has no effect, but was intended to "change the x-axis relative to the current reference frame" (whatever that means).
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">a</td>
+							<td class="params">rx,ry xAxisRotate LargeArcFlag,SweepFlag dx,dy</td>
+							<td class="description">
+								Draws an elliptical arc starting at the current position, ending at the specified distance away horizontally and vertically, and having the specified horizontal and vertical radius.
+								LargeArcFlag indicates whether the smallest (0) or largest (1) arc should be drawn.
+								SweepFlag indicates whether to draw the arc counter-clockwise (0) or clockwise (1).
+								xAxisRotate currently has no effect, but was intended to "change the x-axis relative to the current reference frame" (whatever that means).
+							</td>
+						</tr>
+						<tr class="finalCommandInGroup">
+							<td class="command">Z</td>
+							<td class="params"></td>
+							<td class="description">
+								Closes the path by drawing a line from the current position back to the first point on the path.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h3>Examples of cubic bezier curves</h3>
+				<p>
+					In these examples, the end points are marked with a red dot.
+					The control points are marked with blue dots.
+				</p>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -40,0 C -10,-40 10,40 40,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-10" cy="-40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="10" cy="40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-40,0</span>
+								C
+								<span style="color: blue;">-10,-40 10,40</span>
+								<span style="color: red;">40,0</span>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -40,0 C 0,-40 0,-40 40,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="0" cy="-40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-40,0</span>
+								C
+								<span style="color: blue;">0,-40 0,-40</span>
+								<span style="color: red;">40,0</span>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -40,0 S 0,-40 40,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="0" cy="-40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="40" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-40,0</span>
+								S
+								<span style="color: blue;">0,-40</span>
+								<span style="color: red;">40,0</span>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Examples of quadratic bezier curves</h3>
+				<p>
+					In these examples, calculated control points are marked with a purple dot.
+					In the second example below, the green lines illustrate how the reflection of each calculated control point is determined for the T commands.
+					The third example below shows the same quadratic curves drawn with explicit control points using the Q command instead.
+				</p>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -40,-20 Q -40,40 40,20" style="stroke: black; fill: none;"></path>
+								<circle cx="-40" cy="-20" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-40" cy="40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="40" cy="20" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-40,-20</span>
+								Q
+								<span style="color: blue;">-40,40</span>
+								<span style="color: red;">40,20</span>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<polyline points="-30,-40 0,-30 30,-20 30,0 30,20 0,30 -30,40" style="stroke: green; fill: none;"></polyline>
+								<path d="M -30,0 Q -30,-40 0,-30 T 30,0 T 0,30 T-30,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-30" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-30" cy="-40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="0" cy="-30" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="30" cy="-20" r="2" style="stroke: purple; fill: purple;"></circle>
+								<circle cx="30" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="30" cy="20" r="2" style="stroke: purple; fill: purple;"></circle>
+								<circle cx="0" cy="30" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-30" cy="40" r="2" style="stroke: purple; fill: purple;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-30,0</span>
+								Q
+								<span style="color: blue;">-30,-40</span>
+								<span style="color: red;">0,-30</span>
+								T
+								<span style="color: red;">30,0</span>
+								T
+								<span style="color: red;">0,30</span>
+								T
+								<span style="color: red;">-30,0</span>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -30,0 Q -30,-40 0,-30 Q 30,-20 30,0 Q 30,20 0,30 Q -30,40 -30,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-30" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-30" cy="-40" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="0" cy="-30" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="30" cy="-20" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="30" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="30" cy="20" r="2" style="stroke: blue; fill: blue;"></circle>
+								<circle cx="0" cy="30" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="-30" cy="40" r="2" style="stroke: blue; fill: blue;"></circle>
+							</svg>
+							<figcaption>
+								M
+								<span style="color: red;">-30,0</span>
+								Q
+								<span style="color: blue;">-30,-40</span>
+								<span style="color: red;">0,-30</span>
+								Q
+								<span style="color: blue;">30,-20</span>
+								<span style="color: red;">30,0</span>
+								Q
+								<span style="color: blue;">30,20</span>
+								<span style="color: red;">0,30</span>
+								Q
+								<span style="color: blue;">-30,40</span>
+								<span style="color: red;">-30,0</span>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Examples of arcs</h3>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -20,0 A 25,25 0 0,0 20,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								Small arc, counter-clockwise (0,0)
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -20,0 A 25,25 0 1,0 20,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								Large arc, counter-clockwise (1,0)
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -20,0 A 25,25 0 0,1 20,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								Small arc, clockwise (0,1)
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<path d="M -20,0 A 25,25 0.5 1,1 20,0" style="stroke: black; fill: none;"></path>
+								<circle cx="-20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+								<circle cx="20" cy="0" r="2" style="stroke: red; fill: red;"></circle>
+							</svg>
+							<figcaption>
+								Large arc, clockwise (1,1)
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<p style="clear:both;">
+					The next article will act as a reference for drawing text in SVG.
+				</p>
+				
+				<div class="guideNavigationArea">
+					<div class="previousArticle">
+						<a href="part-02-shape-reference.html">Previous: Shape Reference</a>
+					</div>
+					<div class="nextArticle">
+						Next: Text Reference (Coming Soon)
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</article>
+		</div>
+		
+		<div class="rightPanel">
+			
+			<section class="miniPanel">
+				<h2>SVG Tutorial and Reference</h2>
+				<p><a href="index.html">Introduction to SVG</a></p>
+				<p><a href="part-01-coordinates.html">SVG Co-ordinate System</a></p>
+				<p><a href="part-02-shape-reference.html">Shape Reference</a></p>
+				<p><a href="javascript:void(0);">Path Reference</a></p>
+			</section>
+			
+		</div>
+		
+		<footer></footer>
+		
+	</section>
+	
+</body>
+
+</html>

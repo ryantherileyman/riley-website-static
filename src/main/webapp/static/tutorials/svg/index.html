@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>The Riley Programming Website - SVG Tutorial</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-site-screen.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-tutorial-svg.css" />
+
+<style type="text/css">
+	circle {
+		fill: none;
+	}
+	circle:hover {
+		fill: orange;
+	}
+</style>
+
+<body>
+	
+	<header class="pageHeader">
+		<div class="siteTitle">The Riley Programming Site</div>
+		<div class="tagLine">Exploring vector graphics on the web...</div>
+	</header>
+	
+	<section class="pageContent">
+		
+		<nav class="pageNavigation">
+			<ul>
+				<li><a href="../../../index.html">Home</a></li>
+				<li><a href="../../../blog.html">Blog</a></li>
+				<li class="currentlyViewing"><a href="javascript:void(0);">Tutorials</a></li>
+				<li><a href="../../../movies.html">Movies</a></li>
+				<li><a href="../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		
+		<div class="leftPanel">
+			
+			<article>
+				<h2>Introduction to SVG</h2>
+				<p>
+					SVG is an acronym for <a href="https://www.w3.org/Graphics/SVG/" target="_blank">Scalable Vector Graphics</a>, an image format for rendering two-dimensional vector graphics.
+					It first became a <a href="https://www.w3.org/" target="_blank">W3C</a> recommendation in September 2001, and was later updated to its current form in August 2011.
+					Web browsers have been capable of displaying *.svg files as referenced images for many years.
+					More recently, the <a href="https://www.w3.org/TR/html5/" target="_blank">HTML 5</a> specification, which became a W3C recommendation in October 2014, included direct support for SVG as part of the Document Object Model (DOM).
+				</p>
+				<p>
+					Vector graphics are particularly useful for drawing diagrams, graphs, or maps.
+					It may also be useful as a replacement for bitmap images in certain cases, such as rotated text or hand-drawn icons.
+					SVG provides direct support for basic shapes including lines, rectangles, circles, ellipses, polygons, arcs, and curves.
+					Shapes can be drawn with a pen that supports solid strokes or dashed / dotted patterns, and filled using patterns or gradients.
+				</p>
+				<p>
+					SVG also provides more advanced capabilities, such as transformations, masks, filters, pre-defined shapes, and even animation.
+					And because shapes can be defined as HTML tags, SVG drawings can be controlled and manipulated by CSS and JavaScript, and users can interact with them in their browser.
+				</p>
+				<p>
+					This tutorial series will attempt to provide a comprehensive guide and reference for all aspects of SVG.
+					I hope readers will find it useful!
+				</p>
+				
+				<h3>Embedding SVG into Web Pages</h3>
+				<p>
+					There are three ways that an SVG drawing can be embedded into a web page.
+				</p>
+				<ul>
+					<li>
+						As a referenced image, using the <b>img</b> tag.
+						If specified, the drawing will be scaled to fit the <b>width</b> and <b>height</b> of the <b>img</b> tag, as compared to the width and height specified by the SVG's <b>viewBox</b>.
+						Any shapes drawn outside the view box will only be visible according to the <b>preserveAspectRatio</b> attribute of the SVG image.
+						CSS that is embedded in the SVG file will be applied, but CSS in the HTML page will not.
+						Images can also be used as a background on a web page with the <b>background-image</b> CSS property.
+					</li>
+					<li>
+						Referenced as the source in an <b>iframe</b> tag.
+						If the drawing is larger than the <b>width</b> and <b>height</b> of the <b>iframe</b> tag, scroll bars will appear.
+						Any shapes drawn outside the view box will not be visible.
+						CSS that is embedded in the SVG file will be applied, but CSS in the HTML page will not.
+					</li>
+					<li>
+						Embedded directly using the <b>svg</b> tag.
+						This is the most flexible way to embed SVG into a web page.
+						Shapes drawn outside the view box will be visible based on the <b>overflow</b> style attribute on the <b>svg</b> tag.
+						CSS that is part of the HTML page applies to the image, and JavaScript events can be attached to individual shapes.
+					</li>
+				</ul>
+				
+				<h3>Embedded Image Tag</h3>
+				<p>
+					The examples below show how an SVG file is displayed when embedded in a web page using an <b>img</b> tag.
+					The image will be scaled, but will otherwise respect the co-ordinate system and aspect ratio of the SVG file.
+					Notice how scaling the image causes the outline of the shapes to scale as well.
+				</p>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<img src="embed-demo.svg" width="80" height="80"></img>
+							<figcaption>
+								<b>img</b> tag, width equals height.
+								Image is scaled, shapes outside the view box are not visible.
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<img src="embed-demo.svg" width="75" height="50"></img>
+							<figcaption>
+								<b>img</b> tag, width greater than height.
+								Image is scaled down, and shapes outside the view box become visible.
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<img src="embed-demo.svg" width="125" height="180"></img>
+							<figcaption>
+								<b>img</b> tag, height greater than width.
+								Image is scaled up, and shapes outside the view box become visible.
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Embedded in an Iframe</h3>
+				<p>
+					The examples below show how an SVG file is displayed when embedded in a web page using an <b>iframe</b> tag.
+					The image will completely respect the co-ordinate system and aspect ratio of the SVG file.
+					Special CSS qualifiers like <b>:hover</b> embedded in the SVG file do get applied when embedding with an <b>iframe</b> tag.
+				</p>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<iframe src="embed-demo.svg" width="60" height="80"></iframe>
+							<figcaption>
+								<b>iframe</b> tag, width and height smaller than view box.
+								Scroll bars appear.
+								Only shapes within the view box appear.
+							</figcaption>
+						</figure>
+					</div>
+					<div class="svgDemoCell">
+						<figure>
+							<iframe src="embed-demo.svg" width="125" height="180"></iframe>
+							<figcaption>
+								<b>iframe</b> tag, width and height larger than view box.
+								Only shapes within the view box appear.
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<h3>Embedded as HTML Tags</h3>
+				<p>
+					The examples below show that SVG can be embedded directly in an HTML 5 web page.
+					This is the most flexible way of adding vector graphics to a page.
+				</p>
+				<div class="svgDemoArea">
+					<div class="svgDemoCell">
+						<figure>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="100" height="100"
+								viewBox="-50,-50 100,100"
+								preserveAspectRatio="xMidYMid meet"
+							>
+								<rect x="-40" y="-40" width="80" height="80" style="stroke: black; fill: none;"></rect>
+								<line x1="-70" y1="-70" x2="70" y2="70" style="stroke: blue;"></line>
+								<rect x="-70" y="-70" width="140" height="140" style="stroke: red; fill: none;"></rect>
+								<circle cx="0" cy="0" r="30" style="stroke: black;"></circle>
+							</svg>
+							<figcaption>
+								<b>svg</b> tag.
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				
+				<p>
+					The next article will further explain how the co-ordinate system operates.
+				</p>
+				<div class="guideNavigationArea">
+					<div class="nextArticle">
+						<a href="part-01-coordinates.html">Next: SVG Co-ordinate System</a>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</article>
+			
+		</div>
+		
+		<div class="rightPanel">
+			
+			<section class="miniPanel">
+				<h2>SVG Tutorial and Reference</h2>
+				<p><a href="javascript:void(0);">Introduction to SVG</a></p>
+				<p><a href="part-01-coordinates.html">SVG Co-ordinate System</a></p>
+				<p><a href="part-02-shape-reference.html">Shape Reference</a></p>
+				<p><a href="part-03-path-reference.html">Path Reference</a></p>
+			</section>
+			
+		</div>
+		
+		<footer></footer>
+		
+	</section>
+	
+</body>
+
+</html>
