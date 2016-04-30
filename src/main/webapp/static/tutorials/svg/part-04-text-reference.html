@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>The Riley Programming Website - SVG Tutorial</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-site-screen.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/r3-tutorial-svg.css" />
+
+<style type="text/css">
+	h3 {
+		clear: both;
+	}
+	div.svgSample {
+		float: right;
+	}
+	div.svgSample figure {
+		border: 1px dotted black;
+	}
+	div.svgSample figcaption {
+		text-align: center;
+	}
+</style>
+
+<body>
+	
+	<header class="pageHeader">
+		<div class="siteTitle">The Riley Programming Site</div>
+		<div class="tagLine">Exploring vector graphics on the web...</div>
+	</header>
+	
+	<section class="pageContent">
+		
+		<nav class="pageNavigation">
+			<ul>
+				<li><a href="../../../index.html">Home</a></li>
+				<li><a href="../../../blog.html">Blog</a></li>
+				<li class="currentlyViewing"><a href="javascript:void(0);">Tutorials</a></li>
+				<li><a href="../../../movies.html">Movies</a></li>
+				<li><a href="../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		
+		<div class="leftPanel">
+			<article>
+				<h2>SVG Text Reference</h2>
+				<p>
+					The SVG specification includes the ability to render text as part of the image.
+					Unlike regular bitmap images, text inside a vector graphics image can be selected by the user and will be processed by search engines.
+					SVG provides more flexibility than regular text on a web page, by allowing it to be transformed or to follow a path.
+				</p>
+				
+				<h3>Text</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="250" height="80"
+							viewBox="-50,-50 100,100"
+						>
+							<line x1="-100" y1="0" x2="100" y2="0" style="stroke: blue;"></line>
+							<text x="-100" y="0">Sample text in default font</text>
+						</svg>
+						<figcaption>text</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>text</b> tag renders text beginning at some point.
+					Vertically, text is anchored on the <b>y</b> co-ordinate as its baseline.
+					In the provided example, the baseline is represented by a blue line.
+				</p>
+				<ul>
+					<li><b>x</b> - Horizontal starting position of the text.</li>
+					<li><b>y</b> - Vertical baseline of the text.</li>
+					<li>
+						<b>dx</b> -
+						Distance to shift the text horizontally.
+						If multiple numbers are provided, the distances will be applied to each consecutive character.
+						Additional characters adopt the distance specified by the last number.
+					</li>
+					<li><b>dy</b> - Distance to shift the text vertically.</li>
+				</ul>
+				
+				<h3>Text Spans</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="250" height="80"
+							viewBox="-50,-50 100,100"
+						>
+							<text x="-100" y="-40">
+								<tspan dy="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1">Characters on a step</tspan>
+							</text>
+							<text x="-100" y="0">
+								Apply <tspan style="font-weight: bold;">bold</tspan> to tspan
+							</text>
+							<text x="-100" y="40">
+								<tspan>Shift</tspan>
+								<tspan dx="5">me</tspan>
+								<tspan dx="20">way over</tspan>
+							</text>
+						</svg>
+						<figcaption>tspan with shifted text</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>tspan</b> tag is similar to the standard <b>span</b> tag, but can only be placed inside an SVG <b>text</b> tag.
+					It can be used to change font style properties for its contained text, or push text some distance away.
+				</p>
+				<ul>
+					<li>
+						<b>dx</b> -
+						Distance to shift the text horizontally.
+						If multiple numbers are provided, the distances will be applied to each consecutive character.
+						Additional characters adopt the distance specified by the last number.
+					</li>
+					<li><b>dy</b> - Distance to shift the text vertically.</li>
+				</ul>
+				
+				<h3>Text on a Path</h3>
+				<div class="svgSample">
+					<figure>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="250" height="80"
+							viewBox="-50,-50 100,100"
+						>
+							<defs>
+								<path id="circularTextPathSample" d="M-40,0 A60,50 0 0,0 40,0"></path>
+							</defs>
+							<use xlink:href="#circularTextPathSample" style="stroke: blue; fill: none;"></use>
+							<text dy="-20">
+								<textPath xlink:href="#circularTextPathSample">Squishy Text!</textPath>
+							</text>
+							<text>
+								<textPath xlink:href="#circularTextPathSample">Elliptical Text!</textPath>
+							</text>
+							<text dy="20">
+								<textPath xlink:href="#circularTextPathSample">Expanded Text!</textPath>
+							</text>
+						</svg>
+						<figcaption>textPath</figcaption>
+					</figure>
+				</div>
+				<p>
+					The <b>textPath</b> tag allows text to be rendered with its baseline along an arbitrarily complex path.
+					Individual characters will be rotated accordingly.
+					In the provided example, the path used as the baseline is represented by a blue line.
+				</p>
+				<p>
+					The path to reference is typically defined as a re-useable shape inside a <b>defs</b> tag.
+					More information will be provided later in this guide related to grouping and re-using shapes.
+				</p>
+				<p>
+					The x and y co-ordinates of the parent <b>text</b> tag are ignored, instead using the position specified by the path.
+				</p>
+				<p>
+					If a dx and/or dx attribute are specified on the parent <b>text</b> tag, they will be used to shift the text.
+					When doing so, the baseline is used as a distorted x-axis.
+				</p>
+				<p>
+					The "Squishy Text!" in the example uses a <b>dy</b> value of -20, causing the text to be raised up 20 pixels, but also squished due to distortion.
+					The "Expanded Text" uses a <b>dy</b> value of 20, causing the text to be lowered by 20 pixels, but also expanded due to distortion.
+				</p>
+				<ul>
+					<li><b>startOffset</b> - Specifies the distance along the path that the text will begin rendering.</li>
+					<li><b>xlink:href</b> - Reference to the path to use as the baseline.</li>
+				</ul>
+				<p>
+					The difficult thing about drawing text on a path is estimating the length of the path for the desired text.
+					The SVG specification provides a <a href="https://www.w3.org/TR/SVG/text.html#TextElementTextLengthAttribute" target="_blank"><b>textLength</b></a> attribute on the <b>text</b> tag for this purpose.
+					Unfortunately, this attribute is not supported by Internet Explorer.
+					Currently, to reliably draw text along a path in all browsers, you will need to specify the font size or kerning, and test the results yourself.
+				</p>
+				
+				<h3>Text CSS Properties</h3>
+				<p>
+					Text drawn using SVG behaves differently than regular text in an HTML page.
+					All the CSS properties related to the pen stroke and fill are also applied to text.
+					All the CSS properties related to fonts also apply to SVG text.
+				</p>
+				<p>
+					There are a number of additional CSS properties in the SVG specification dealing with text.
+					However, browser support appears to be very poor for all of these with the exception of <b>text-anchor</b>.
+				</p>
+				<ul>
+					<li>
+						<b>text-anchor</b> -
+						Specifies the horizontal alignment.
+						The default is <b>start</b>, meaning the text begins at the horizontal x position.
+						A value of <b>middle</b> means the text will be centered at the x position.
+						A value of <b>end</b> means the text ends at the x position.
+					</li>
+				</ul>
+				
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="100%" height="120px"
+					viewBox="-50,-50 100,100"
+				>
+					<text x="0" y="0" style="font-size: 32pt; stroke: blue; stroke-dasharray: 5 1; fill: yellow; text-anchor: middle;">
+						Sample SVG Text with Stroke and Fill
+					</text>
+				</svg>
+				
+				<p style="clear: both;">
+					The next article will explain how to group shapes together, and provide insight into how this is helpful when applying CSS and dealing with user interaction.
+				</p>
+				
+				<div class="guideNavigationArea">
+					<div class="previousArticle">
+						<a href="part-03-path-reference.html">Previous: Path Reference</a>
+					</div>
+					<div class="nextArticle">
+						Next: Grouping Shapes (Coming Soon)
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</article>
+		</div>
+		
+		<div class="rightPanel">
+			
+			<section class="miniPanel">
+				<h2>SVG Tutorial and Reference</h2>
+				<p><a href="index.html">Introduction to SVG</a></p>
+				<p><a href="part-01-coordinates.html">SVG Co-ordinate System</a></p>
+				<p><a href="part-02-shape-reference.html">Shape Reference</a></p>
+				<p><a href="part-03-path-reference.html">Path Reference</a></p>
+				<p><a href="javascript:void(0);">Text Reference</a></p>
+			</section>
+			
+			<section class="miniPanel">
+				<h2>External SVG Resources</h2>
+				<p><a href="https://www.w3.org/Graphics/SVG/" target="_blank">W3C SVG Specification Homepage</a></p>
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">Mozilla Developer Network SVG Homepage</a></p>
+				<p><a href="http://tutorials.jenkov.com/svg/index.html" target="_blank">SVG Tutorial on jenkov.com</a></p>
+			</section>
+			
+		</div>
+		
+		<footer></footer>
+		
+	</section>
+	
+</body>
+
+</html>
