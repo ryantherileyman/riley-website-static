@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eve Online - Federal Data Center Agents</title>
+    
+    <style type="text/css">
+        body {
+            background-color: #090909;
+        }
+        body h2 {
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        
+        div.localNavigation ul {
+            list-style: none;
+            color: #DDDDDD;
+            background-color: #292929;
+            text-align: center;
+            border-bottom: 1px solid #999999;
+        }
+        div.localNavigation li.navigationHeader {
+            margin-right: 2em;
+        }
+        div.localNavigation li {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 2em;
+            height: 2em;
+            margin: 0px;
+        }
+        div.localNavigation a {
+            display: block;
+            text-decoration: none;
+            color: #CCCC33;
+            padding: 0em 1em;
+            transition: 0.5s background-color;
+        }
+        div.localNavigation a:hover {
+            background-color: #494949;
+        }
+        div.localNavigation a.active {
+            background-color: #DFDFDF;
+            color: #6666CC;
+        }
+        
+        @media screen and (min-width: 640px) {
+            div.localNavigation li {
+                display: inline-block;
+            }
+        }
+        
+        table.dataCenterAgentTable {
+            border: 1px solid black;
+            width: 100%;
+            font-family: Calibri, Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #DDDDDD;
+        }
+        table.dataCenterAgentTable th,
+        table.dataCenterAgentTable td {
+            border: 1px solid grey;
+            padding: 0.1em 0.25em;
+            vertical-align: top;
+        }
+        table.dataCenterAgentTable td.agentLevel {
+            text-align: center;
+        }
+        table.dataCenterAgentTable tr.solarSystemRow th {
+            padding-top: 0.75em;
+            text-align: center;
+            font-size: 16pt;
+            color: #CCCC33;
+        }
+        div.agentName {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Federal Data Centers</h2>
+
+    <div class="localNavigation">
+        <ul>
+            <li class="navigationHeader">Gallente Cosmos:</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beacon-summary.html">Beacons and Sites</a></li>
+            <li><a class="active" href="javascript:void(0);">Data Center Agents</a></li>
+            <li><a href="agent-summary-gallente.html">Gallente Agents</a></li>
+            <li><a href="agent-summary-others.html">Non-Gallente Agents</a></li>
+        </ul>
+    </div>
+
+    <table class="dataCenterAgentTable">
+        <thead>
+            <tr class="solarSystemRow">
+                <th colspan="8">Ekuenbiron</td>
+            </tr>
+            <tr>
+                <th class="agent">Agent</th>
+                <th class="agentLevel">Level</th>
+                <th class="agentType">Type</th>
+                <th class="missionRequirements">Requirements</th>
+                <th class="missionName">Mission Name</th>
+                <th class="tagCost">Cost per Tag (Dodixie)</div>
+                <th class="rewards">Rewards</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Etien Duloure</div>
+                    <div class="corporation">Fedmart</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">The Graduation Certificate</td>
+                <td class="tagCost">N/A</div>
+                <td class="rewards">
+                    <div class="itemReward">Gallente Graduation Certificate (signed)</div>
+                    <div class="accessReward">Access to Agent Avrue Auz in Lirsautton</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.083 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Beteux Maron</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 3 Serpentis Copper Tags)</div>
+                </td>
+                <td class="tagCost">30,000 - 120,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.173 *</div>
+                </td>
+            </tr>
+        </tbody>
+        
+        <thead>
+            <tr class="solarSystemRow">
+                <th colspan="8">Abenync</td>
+            </tr>
+            <tr>
+                <th class="agent">Agent</th>
+                <th class="agentLevel">Level</th>
+                <th class="agentType">Type</th>
+                <th class="missionRequirements">Requirements</th>
+                <th class="missionName">Mission Name</th>
+                <th class="tagCost">Cost per Tag (Dodixie)</div>
+                <th class="rewards">Rewards</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Vausitte Yrier</div>
+                    <div class="corporation">Fedmart</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">The Graduation Certificate</td>
+                <td class="tagCost">N/A</div>
+                <td class="rewards">
+                    <div class="itemReward">Gallente Graduation Certificate (signed)</div>
+                    <div class="accessReward">Access to Agent Avrue Auz in Lirsautton</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.083 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Wenda Lamort</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 3 Serpentis Copper Tags)</div>
+                </td>
+                <td class="tagCost">30,000 - 120,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.173 *</div>
+                </td>
+            </tr>
+        </tbody>
+        
+        <thead>
+            <tr class="solarSystemRow">
+                <th colspan="8">Muer</td>
+            </tr>
+            <tr>
+                <th class="agent">Agent</th>
+                <th class="agentLevel">Level</th>
+                <th class="agentType">Type</th>
+                <th class="missionRequirements">Requirements</th>
+                <th class="missionName">Mission Name</th>
+                <th class="tagCost">Cost per Tag (Dodixie)</div>
+                <th class="rewards">Rewards</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Maray Ygier</div>
+                    <div class="corporation">Fedmart</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">The Graduation Certificate</td>
+                <td class="tagCost">N/A</div>
+                <td class="rewards">
+                    <div class="itemReward">Gallente Graduation Certificate (signed)</div>
+                    <div class="accessReward">Access to Agent Avrue Auz in Lirsautton</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.083 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Jaak Rozake</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 3 Serpentis Copper Tags)</div>
+                </td>
+                <td class="tagCost">30,000 - 120,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.173 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Blique Hazardt</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">None</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Bronze Tags)</div>
+                </td>
+                <td class="tagCost">1,500,000 - 3,000,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.173 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Alliot Graferr</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 1</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Silver Tags)</td>
+                </td>
+                <td class="tagCost">26,000 - 130,000</td>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.152 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Mobas Jouey</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 1</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Brass Tags)</td>
+                </td>
+                <td class="tagCost">12,000,000 - 20,000,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.403 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Alon Ahrassine</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 3</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Palladium Tags)</td>
+                </td>
+                <td class="tagCost">150,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.107 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Amatin Chens</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 3</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Gold Tags)</td>
+                </td>
+                <td class="tagCost">4,500,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.633 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Fims Artalanche</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 3</div>
+                </td>
+                <td class="missionName">
+                    <div>Keeping Crime in Check</div>
+                    <div>(Give 20 Serpentis Electrum Tags)</td>
+                </td>
+                <td class="tagCost">12,000</div>
+                <td class="rewards">
+                    <div class="factionStandingsReward">Gallente Federation: 0.100 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Carvaire Botesane</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 5</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="tagCost">TBD</div>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Hana Isourin</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 5</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="tagCost">TBD</div>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Oisedia Gync</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Corporation Standings: 5</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="tagCost">TBD</div>
+                <td class="rewards">TBD</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">
+                    * Faction standings gains are based on your character's Social skill at the time of mission chain completion.
+                    The gains listed in this chart are for an Alpha character with Social trained to level 3.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

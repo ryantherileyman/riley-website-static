@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eve Online - Gallente Cosmos Agents in Algintal</title>
+    
+    <style type="text/css">
+        body {
+            background-color: #090909;
+        }
+        body h2 {
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        
+        div.localNavigation ul {
+            list-style: none;
+            color: #DDDDDD;
+            background-color: #292929;
+            text-align: center;
+            border-bottom: 1px solid #999999;
+        }
+        div.localNavigation li.navigationHeader {
+            margin-right: 2em;
+        }
+        div.localNavigation li {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 2em;
+            height: 2em;
+            margin: 0px;
+        }
+        div.localNavigation a {
+            display: block;
+            text-decoration: none;
+            color: #CCCC33;
+            padding: 0em 1em;
+            transition: 0.5s background-color;
+        }
+        div.localNavigation a:hover {
+            background-color: #494949;
+        }
+        div.localNavigation a.active {
+            background-color: #DFDFDF;
+            color: #6666CC;
+        }
+        
+        @media screen and (min-width: 640px) {
+            div.localNavigation li {
+                display: inline-block;
+            }
+        }
+        
+        table.cosmosAgentTable {
+            border: 1px solid black;
+            width: 100%;
+            font-family: Calibri, Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #DDDDDD;
+        }
+        table.cosmosAgentTable th,
+        table.cosmosAgentTable td {
+            border: 1px solid grey;
+            padding: 0.1em 0.25em;
+            vertical-align: top;
+        }
+        table.cosmosAgentTable tr.currentAgentRow {
+            background-color: #2E2E1E;
+        }
+        table.cosmosAgentTable td.agentLevel {
+            text-align: center;
+        }
+        table.cosmosAgentTable tr.factionRow th {
+            padding-top: 0.75em;
+            text-align: center;
+            font-size: 16pt;
+            color: #CCCC33;
+        }
+        div.agentName {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Algintal Constellation - Gallente Cosmos Agents</h2>
+
+    <div class="localNavigation">
+        <ul>
+            <li class="navigationHeader">Gallente Cosmos:</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beacon-summary.html">Beacons and Sites</a></li>
+            <li><a class="active" href="javascript:void(0);">Gallente Agents</a></li>
+            <li><a href="agent-summary-others.html">Non-Gallente Agents</a></li>
+        </ul>
+    </div>
+
+    <table class="cosmosAgentTable">
+        <thead>
+            <tr class="factionRow">
+                <th colspan="8">Gallente Federation</td>
+            </tr>
+            <tr>
+                <th class="agent">Agent</th>
+                <th class="agentLevel">Level</th>
+                <th class="agentType">Type</th>
+                <th class="missionRequirements">Requirements</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="systemLocation">Location</th>
+                <th class="missionName">Mission Name</th>
+                <th class="rewards">Rewards</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Jannegiers Estacan</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Standings: None</div>
+                    <div class="itemRequirements">Item: 100 Fertilizer</div>
+                </td>
+                <td class="solarSystem">Audaerne</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Natura Seminary</div>
+                </td>
+                <td class="missionName">
+                    <div>Activist Fuel (4 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Beatnik' Small Remote Armor Repairer Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.012 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Pandon Ardilan</div>
+                    <div class="corporation">The Scope</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                </td>
+                <td class="solarSystem">Barmalie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Ebony Tower</div>
+                </td>
+                <td class="missionName">
+                    <div>On the Trail (4 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">FON Strike Scene Evidence</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.031 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Preaux Gallot</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                    <div class="itemRequirements">FON Strike Scene Evidence</div>
+                </td>
+                <td class="solarSystem">Audaerne</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Natura Seminary</div>
+                </td>
+                <td class="missionName">
+                    <div>A Storm Brewing (6 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Aura' Warp Core Stabilizer Blueprint</div>
+                    <div class="itemReward">'Pacifier' Large Remote Armor Repairer Blueprint</div>
+                    <div class="itemReward">Preaux's Letter</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.065 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow currentAgentRow">
+                <td class="agent">
+                    <div class="agentName">Ystvia Lamuette</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                    <div class="itemRequirements">Preaux's Letter</div>
+                </td>
+                <td class="solarSystem">Barmalie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Ebony Tower</div>
+                </td>
+                <td class="missionName">
+                    <div>Uproot (5 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward"><span style="text-decoration: line-through;">'Entrepreneur'</span>'Bootleg' Remote Sensor Booster Blueprint</div>
+                    <div class="itemReward">'Investor' Tracking Disruptor Blueprint</div>
+                    <div class="itemReward">'Marketeer' Tracking Computer Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.021 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Ardoen Dasaner</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Grand Future Information Center</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Aminn Flosin</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Central Administration</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Onreun Coen</div>
+                    <div class="corporation">Federal Intelligence Office</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Central Administration</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Nilla Elermare</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Contested Gallente Roden Shipyard's Outpost</div>
+                    <div>Entry Gate</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Astroo Opeau</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Arid Park</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Sebast Mathon</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Deltole</td>
+                <td class="systemLocation">
+                    <div>Signature JTD-372:  Yan Jung Ruins</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Schabs Xalot</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Mining</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4?</div>
+                </td>
+                <td class="solarSystem">Colelie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Survey Station</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Croir Arghe</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Arid Park</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Babalu Wrezka</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Jordan Usquen</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Timmothy Sawyr</div>
+                    <div class="corporation">Senate Bureau</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">
+                    * Faction standings gains are based on your character's Social skill at the time of mission chain completion.
+                    The gains listed in this chart are for an Alpha character with Social trained to level 3.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+
+</html>

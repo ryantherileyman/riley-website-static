@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eve Online - Beacons and Sites in Algintal</title>
+    
+    <style type="text/css">
+        body {
+            background-color: #090909;
+        }
+        body h2 {
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        
+        div.localNavigation ul {
+            list-style: none;
+            color: #DDDDDD;
+            background-color: #292929;
+            text-align: center;
+            border-bottom: 1px solid #999999;
+        }
+        div.localNavigation li.navigationHeader {
+            margin-right: 2em;
+        }
+        div.localNavigation li {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 2em;
+            height: 2em;
+            margin: 0px;
+        }
+        div.localNavigation a {
+            display: block;
+            text-decoration: none;
+            color: #CCCC33;
+            padding: 0em 1em;
+            transition: 0.5s background-color;
+        }
+        div.localNavigation a:hover {
+            background-color: #494949;
+        }
+        div.localNavigation a.active {
+            background-color: #DFDFDF;
+            color: #6666CC;
+        }
+        
+        @media screen and (min-width: 640px) {
+            div.localNavigation li {
+                display: inline-block;
+            }
+        }
+        
+        figure.center {
+            text-align: center;
+        }
+        figure.center figcaption {
+            font-family: Calibri, Arial, sans-serif;
+            font-style: italic;
+            color: #DFDFDF;
+        }
+        
+        table.beaconTable {
+            border: 1px solid black;
+            width: 100%;
+            font-family: Calibri, Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #DDDDDD;
+        }
+        table.beaconTable th,
+        table.beaconTable td {
+            border: 1px solid grey;
+            padding: 0.1em 0.25em;
+            vertical-align: top;
+        }
+        table.beaconTable tr.beaconTypeRow th {
+            padding-top: 0.75em;
+            text-align: center;
+            font-size: 16pt;
+            color: #CCCC33;
+        }
+        table.beaconTable tr.solarSystemRow th {
+            padding-top: 0.75em;
+            text-align: center;
+            font-size: 16pt;
+            color: #CCCC33;
+        }
+        table.beaconTable td.beaconName {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        table.beaconTable a.dedSiteLink {
+            color: #CCCC33;
+        }
+        table.beaconTable a.dedSiteLink:hover {
+            color: #EEEE99
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Algintal Constellation - Beacons and Sites</h2>
+
+    <div class="localNavigation">
+        <ul>
+            <li class="navigationHeader">Gallente Cosmos:</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="#">Beacons and Sites</a></li>
+            <li><a href="agent-summary-data-centers.html">Data Center Agents</a></li>
+            <li><a href="agent-summary-gallente.html">Gallente Agents</a></li>
+            <li><a href="agent-summary-others.html">Non-Gallente Agents</a></li>
+        </ul>
+    </div>
+    
+    <table class="beaconTable">
+        <thead>
+            <tr class="beaconTypeRow">
+                <th colspan="4">Agent on Gates</td>
+            </tr>
+            <tr>
+                <th class="beaconName">Stargate</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="roomList">Rooms</th>
+                <th class="agentList">Agents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="beaconRow">
+                <td class="beaconName">Gate to Augnais</td>
+                <td class="solarSystem">Jolia</td>
+                <td class="roomList">None</td>
+                <td class="agentList">
+                    <div class="agentItem">Babalu Wrezka - Gallente Federation - Level 4</div>
+                    <div class="agentItem">Jordan Usquen - Gallente Federation - Level 4</div>
+                    <div class="agentItem">Timmothy Sawyr - Gallente Federation - Level 4</div>
+                </td>
+            </tr>
+        </tbody>
+        
+        <thead>
+            <tr class="beaconTypeRow">
+                <th colspan="4">Agent Sites</td>
+            </tr>
+            <tr>
+                <th class="beaconName">Beacon</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="roomList">Rooms</th>
+                <th class="agentList">Agents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="beaconRow">
+                <td class="beaconName">Arid Park</td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Astroo Opeau - Gallente Federation - Level 3</div>
+                    <div class="agentItem">Croir Arghe - Gallente Federation - Level 4</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Central Administration</td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Veko Tallaja - Caldari State - Level 2</div>
+                    <div class="agentItem">Aminn Flosin - Gallente Federation - Level 3</div>
+                    <div class="agentItem">Onreun Coen - Gallente Federation - Level 3</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Grand Future Information Center</td>
+                <td class="solarSystem">Jolia</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Ardoen Dasaner - Gallente Federation - Level 2</div>
+                    <div class="agentItem">Gara Kort - Caldari State - Level 4</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Latent Transmitter</td>
+                <td class="solarSystem">Parchanier</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Trex Ameisoure - Angel Cartel - Level 2</div>
+                    <div class="agentItem">Drusk Amakkit - Thukker Tribe - Level 3</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Municipal Junkyard</td>
+                <td class="solarSystem">Deltole</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Krester Rupptofs - Thukker Tribe - Level 3</div>
+                    <div class="agentItem">Wrtuk Formur - Thukker Tribe - Level 4</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Natura Seminary</td>
+                <td class="solarSystem">Audaerne</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Jannegiers Estacan - Gallente Federation - Level 1</div>
+                    <div class="agentItem">Preaux Gallot - Gallente Federation - Level 2</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Nickel &amp; Dime Store</td>
+                <td class="solarSystem">Augnais</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Pattok Nortul - Thukker Tribe - Level 1</div>
+                    <div class="agentItem">Iliere Agnetyn - Thukker Tribe - Level 2</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Survey Station</td>
+                <td class="solarSystem">Colelie</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Aakeo Oshaima - Caldari State - Level 2</div>
+                    <div class="agentItem">Schabs Xalot - Gallente Federation - Level 3</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">The Ebony Tower</td>
+                <td class="solarSystem">Barmalie</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">
+                    <div class="agentItem">Pandon Ardilan - Gallente Federation - Level 2</div>
+                    <div class="agentItem">Ystvia Lamuette - Gallente Federation - Level 2</div>
+                </td>
+            </tr>
+        </tbody>
+        
+        <thead>
+            <tr class="beaconTypeRow">
+                <th colspan="4">D.E.D. Deadspace Sites</td>
+            </tr>
+            <tr>
+                <th class="beaconName">Beacon</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="roomList">Rooms</th>
+                <th class="agentList">Agents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="beaconRow">
+                <td class="beaconName"><a class="dedSiteLink" href="canyon-of-rust.html">Contested Canyon of Rust (DED 4/10)</a></td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="roomList">
+                    <div class="room">Wiyrkomi Engineering Outpost (Wiyrkomi Head Engineer)</div>
+                    <div class="room">Infested Comet Remains (The Negotiator)</div>
+                    <div class="room">Remote Corelum Safe Haven (Core Serpentis Operational Headquarters)</div>
+                </td>
+                <td class="agentList">None</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Contested Gallente Azure Chasm (DED 4/10)</td>
+                <td class="solarSystem">Colelie</td>
+                <td class="roomList">TBD</td>
+                <td class="agentList">TBD</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName"><a class="dedSiteLink" href="roden-shipyard-outpost.html">Contested Gallente Roden Shipyard's Outpost (DED 3/10)</a></td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="roomList">
+                    <div class="room">The Shipyard</div>
+                    <div class="room">The Pirate Haven (Maqeri Camcen)</div>
+                    <div class="room">Corelum Drughouse (Jark Makon, Wreck of Isone's Ship, Serpentis Narcotics Storage)</div>
+                </td>
+                <td class="agentList">
+                    <div class="agentItem">Nilla Elermare - Gallente Federation - Level 3</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Contested Gallente Skeleton Comet (DED 4/10)</td>
+                <td class="solarSystem">Deltole</td>
+                <td class="roomList">TBD</td>
+                <td class="agentList">TBD</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Pend Insurance Storage Bin (DED 2/10)</td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">None</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Yan Jung Relic Site (DED 5/10)</td>
+                <td class="solarSystem">Deltole</td>
+                <td class="roomList">TBD</td>
+                <td class="agentList">TBD</td>
+            </tr>
+        </tbody>
+        
+        <thead>
+            <tr class="beaconTypeRow">
+                <th colspan="4">Cosmic Signatures</td>
+            </tr>
+            <tr>
+                <th class="beaconName">Signature</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="roomList">Rooms</th>
+                <th class="agentList">Agents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="beaconRow">
+                <td class="beaconName">Pourpas Aunten (VCQ-807)</td>
+                <td class="solarSystem">Jolia</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">None</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Secret Drone Hive (HDT-750)</td>
+                <td class="solarSystem">Parchanier</td>
+                <td class="roomList">TBD</td>
+                <td class="agentList">
+                    <div class="agentItem">Damaged Drone Mind - O.R.E. - Level 1</div>
+                </td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Temko Surveillance Outpost (SIX-972)</td>
+                <td class="solarSystem">Colelie</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">None</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">The Serpentis Agent (DCF-606)</td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="roomList">No Gates</td>
+                <td class="agentList">None</td>
+            </tr>
+            <tr class="beaconRow">
+                <td class="beaconName">Yan Jung Ruins (JTD-372)</td>
+                <td class="solarSystem">Deltole</td>
+                <td class="roomList">TBD</td>
+                <td class="agentList">
+                    <div class="agentItem">Sebast Mathon - Gallente Federation - Level 3</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

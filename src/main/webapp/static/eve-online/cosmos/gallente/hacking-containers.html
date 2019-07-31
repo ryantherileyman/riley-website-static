@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eve Online - Gallente Cosmos Hacking Containers</title>
+    <style type="text/css">
+        body {
+            background-color: #090909;
+            font-family: Calibri, Arial, sans-serif;
+            color: #DDDDDD;
+        }
+        body h2 {
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        body h3 {
+            margin-top: 2em;
+            border-bottom: 1px solid #CCCC33;
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        
+        div.localNavigation ul {
+            list-style: none;
+            color: #DDDDDD;
+            background-color: #292929;
+            text-align: center;
+            border-bottom: 1px solid #999999;
+        }
+        div.localNavigation li.navigationHeader {
+            margin-right: 2em;
+        }
+        div.localNavigation li {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 2em;
+            height: 2em;
+            margin: 0px;
+        }
+        div.localNavigation a {
+            display: block;
+            text-decoration: none;
+            color: #CCCC33;
+            padding: 0em 1em;
+            transition: 0.5s background-color;
+        }
+        div.localNavigation a:hover {
+            background-color: #494949;
+        }
+        div.localNavigation a.active {
+            background-color: #DFDFDF;
+            color: #6666CC;
+        }
+        
+        @media screen and (min-width: 640px) {
+            div.localNavigation li {
+                display: inline-block;
+            }
+        }
+        
+        table.hackingContainerTable,
+        table.hackingDifficultyTable {
+            border: 1px solid black;
+            width: 100%;
+            font-family: Calibri, Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #DDDDDD;
+        }
+        table.hackingContainerTable th,
+        table.hackingContainerTable td,
+        table.hackingDifficultyTable th,
+        table.hackingDifficultyTable td {
+            border: 1px solid grey;
+            padding: 0.1em 0.25em;
+        }
+        div.iconContainer {
+            display: inline-flex;
+            align-items: center;
+        }
+        div.iconContainer div {
+            padding: 0em 0.25em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Gallente Cosmos Hacking Containers</h2>
+    
+    <div class="localNavigation">
+        <ul>
+            <li class="navigationHeader">Gallente Cosmos:</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beacon-summary.html">Beacons and Sites</a></li>
+            <li><a href="agent-summary-data-centers.html">Data Center Agents</a></li>
+            <li><a href="agent-summary-gallente.html">Gallente Agents</a></li>
+            <li><a href="agent-summary-others.html">Non-Gallente Agents</a></li>
+            <li><a class="active" href="javascript:void(0);">Hacking Containers</a></li>
+            <li><a href="gallente-guide.html">Summary</a></li>
+        </ul>
+    </div>
+    
+    <p>
+        There are four tiers of each type of hacking container.
+        Each of the four tiers of containers typically contains one type of item, but in rare cases will contain an item in the next highest tier.
+        The most rare items can only be found in the fourth tier container.
+        The tiers can be slightly misleading, as the hacking difficulty seems to be hardest for the tier 3 containers.
+    </p>
+    
+    <h3>Caskets - Serpentis Faction Materials</h3>
+    <p>
+        Caskets are found in the Serpentis Survey Site in the Skeleton Comet in Deltole.
+        They require a Data Analyzer to access them.
+        They reliably drop Serpentis Materials and Compounds, and often drop Serpentis Artifacts and Prototypes as well.
+        On the market, these are found under Manufacture &amp; Research, Materials, Faction Materials, Serpentis.
+        Note that the Serpentis Materials and Compounds can also be found in standard Serpentis Data Sites.
+    </p>
+    <table class="hackingContainerTable">
+        <thead>
+            <tr>
+                <th class="containerName">Container Name</th>
+                <th class="tier">Tier</th>
+                <th class="hackingDifficulty">Hacking Difficulty</th>
+                <th class="materialType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/serpentis-materials-icon.jpg" /></div>
+                        <div>Materials and Compounds</div>
+                    </div>
+                </th>
+                <th class="artifactType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/serpentis-artifacts-icon.jpg" /></div>
+                        <div>Artifacts and Prototypes</div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Fiction</td>
+                <td class="tier">1</td>
+                <td class="hackingDifficulty">Low</td>
+                <td class="materialType">Current Amplifier</td>
+                <td class="artifactType">Serpentis Plain Target Guider</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Rumor</td>
+                <td class="tier">2</td>
+                <td class="hackingDifficulty">Moderate</td>
+                <td class="materialType">Second-hand Parts</td>
+                <td class="artifactType">Serpentis Basic Target Guider</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Authentic</td>
+                <td class="tier">3</td>
+                <td class="hackingDifficulty">Hardest</td>
+                <td class="materialType">Heat Depressor</td>
+                <td class="artifactType">Serpentis Complex Target Guider</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Fact</td>
+                <td class="tier">4</td>
+                <td class="hackingDifficulty">Hard</td>
+                <td class="materialType">Internal Bulkhead</td>
+                <td class="artifactType">Serpentis 3D Scanner Gamut</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">&nbsp;</td>
+                <td class="tier">5</td>
+                <td class="hackingDifficulty">&nbsp;</td>
+                <td class="materialType">Mainframe Bit</td>
+                <td class="artifactType">Serpentis Multi-tasking Processor</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Monuments - Yan Jung Materials</h3>
+    <p>
+        Monuments can be found in three locations in Deltole:  the Yan Jung Ruins (Deltole VI - Moon 1, static cosmic signature JTD-372), the Ancient Ruins in the Skeleton Comet (requires a Smuggler Knot Lock to access), or the final room of the Yan Jung Relic Site (requires a Gargoyle Passkey to access).
+        They require a Relic Analyzer to access them.
+        They reliably drop Yan Jung Materials and Compounds, and often drop Yan Jung Artifacts and Prototypes as well.
+        On the market, these are found under Manufacture &amp; Research, Materials, Faction Materials, Yan Jung.
+    </p>
+    <table class="hackingContainerTable">
+        <thead>
+            <tr>
+                <th class="containerName">Container Name</th>
+                <th class="tier">Tier</th>
+                <th class="hackingDifficulty">Hacking Difficulty</th>
+                <th class="materialType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/yan-jung-materials-icon.jpg" /></div>
+                        <div>Materials and Compounds</div>
+                    </div>
+                </th>
+                <th class="artifactType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/yan-jung-artifacts-icon.jpg" /></div>
+                        <div>Artifacts and Prototypes</div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Ruined</td>
+                <td class="tier">1</td>
+                <td class="hackingDifficulty">Low</td>
+                <td class="materialType">Yan Jung Null Shell</td>
+                <td class="artifactType">Yan Jung Crystal Cylinder</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Broken</td>
+                <td class="tier">2</td>
+                <td class="hackingDifficulty">Moderate</td>
+                <td class="materialType">Yan Jung Glass Scale</td>
+                <td class="artifactType">Yan Jung Paradox Box</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Impaired</td>
+                <td class="tier">3</td>
+                <td class="hackingDifficulty">Hardest</td>
+                <td class="materialType">Yan Jung Silk Armor</td>
+                <td class="artifactType">Yan Jung Void Machine</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Busted</td>
+                <td class="tier">4</td>
+                <td class="hackingDifficulty">Hard</td>
+                <td class="materialType">Yan Jung Plenary Wire</td>
+                <td class="artifactType">Yan Jung Thunder Kite</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">&nbsp;</td>
+                <td class="tier">5</td>
+                <td class="hackingDifficulty">&nbsp;</td>
+                <td class="materialType">Yan Jung Nano Fabric</td>
+                <td class="artifactType">Yan Jung Tachyon Stetoscope</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Crystals - Yan Jung Decryptors</h3>
+    <p>
+        Crystals can be found in the same three locations as Monuments.
+        They require a Relic Analyzer to access them.
+        They reliably drop both Yan Jung Decryptors, and the Yan Jung Technology skill book.
+        On the market, the decryptors are found under Manufacture &amp; Research, Materials, Faction Materials, Yan Jung.
+    </p>
+    <table class="hackingContainerTable">
+        <thead>
+            <tr>
+                <th class="containerName">Container Name</th>
+                <th class="tier">Tier</th>
+                <th class="hackingDifficulty">Hacking Difficulty</th>
+                <th class="decryptorType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/yan-jung-decryptors-icon.jpg" /></div>
+                        <div>Decryptors</div>
+                    </div>
+                </th>
+                <th class="skillBookType">
+                    <div class="iconContainer">
+                        <div><img src="hacking-items/yan-jung-skillbooks-icon.jpg" /></div>
+                        <div>Skill Books</div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Cracked</td>
+                <td class="tier">1</td>
+                <td class="hackingDifficulty">Low</td>
+                <td class="decryptorType">Yan Jung Vellum Etch</td>
+                <td class="skillBookType">Yan Jung Technology</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Fractured</td>
+                <td class="tier">2</td>
+                <td class="hackingDifficulty">Moderate</td>
+                <td class="decryptorType">Yan Jung Info Matrix</td>
+                <td class="skillBookType">Yan Jung Technology</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Pulsing</td>
+                <td class="tier">3</td>
+                <td class="hackingDifficulty">Hardest</td>
+                <td class="decryptorType">Yan Jung Semiotic Theory</td>
+                <td class="skillBookType">Yan Jung Technology</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">Intact</td>
+                <td class="tier">4</td>
+                <td class="hackingDifficulty">Hard</td>
+                <td class="decryptorType">Yan Jung Trigonometric Laws</td>
+                <td class="skillBookType">Yan Jung Technology</td>
+            </tr>
+            <tr class="hackingContainerRow">
+                <td class="containerName">&nbsp;</td>
+                <td class="tier">5</td>
+                <td class="hackingDifficulty">&nbsp;</td>
+                <td class="decryptorType">Yan Jung Singularity Fact Sheet</td>
+                <td class="skillBookType">Yan Jung Technology</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Hacking Container Difficulty</h3>
+    <p>
+        The hacking mini-game involves revealing nodes on a grid until you find the System Core.
+        Some nodes will impede your progress, while some others provide tools to help you.
+    </p>
+    <p>
+        Your analyzer module has two important attributes:  coherence and strength.
+        Coherence is a measure of how much "damage" you can take before failing the hack.
+        Strength is a measure of how much "damage" you inflict on nodes that impede your progress.
+    </p>
+    <p>
+        The Anti-Virus and Firewall nodes are the two most common that impede your progress.
+        In the table below, the "c" is the coherence of these nodes (how much total "damage" you must inflict on it).
+        The "s" is the strength of these nodes (how much "damage" it inflicts on you).
+    </p>
+    <p>
+        For example, if your analyzer has a strength of 30, and you attack a node rated 40c / 20s.
+        You will reduce its coherence down by 30 (to 10), but take 20 damage to your current coherence.
+        If your strength is equal or higher than a node's current coherence, your own coherence will not be damaged.
+    </p>
+    <p>
+        Tools that you find can be used to either increase your coherence directly,
+        or provide bonuses when attacking nodes.
+    </p>
+    <p>
+        More difficult hacking containers may have additional nodes and tools.
+        Once a Restoration node is revealed, it will restore coherence to other nodes that impede your progress.
+        Once a Virus Suppressor node is revealed, it will reduce your analyzer's attack strength.
+        In most circumstances, it is important to clear Restoration and Virus Suppressor nodes as quickly as possible.
+        Traveling along the edge of the grid towards the far corners is typically the safest way of successfully hacking the most difficult containers.
+    </p>
+    <table class="hackingDifficultyTable">
+        <thead>
+            <tr>
+                <th class="hackingDifficulty">Hacking Difficulty</th>
+                <th class="systemCoreStrength">System Core</th>
+                <th class="antiVirusStrength">Anti-Virus</th>
+                <th class="firewallStrength">Firewall</th>
+                <th class="otherNodes">Other Nodes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hackingDifficultyRow">
+                <td class="hackingDifficulty">Low</td>
+                <td class="systemCoreStrength">50c / 10s</td>
+                <td class="antiVirusStrength">30c / 30s</td>
+                <td class="firewallStrength">40c / 20s</td>
+                <td class="otherNodes">None</td>
+            </tr>
+            <tr class="hackingDifficultyRow">
+                <td class="hackingDifficulty">Moderate</td>
+                <td class="systemCoreStrength">70c / 10s</td>
+                <td class="antiVirusStrength">40c / 40s</td>
+                <td class="firewallStrength">50c / 20s</td>
+                <td class="otherNodes">None</td>
+            </tr>
+            <tr class="hackingDifficultyRow">
+                <td class="hackingDifficulty">Hard</td>
+                <td class="systemCoreStrength">70c / 10s</td>
+                <td class="antiVirusStrength">50c / 40s</td>
+                <td class="firewallStrength">80c / 20s</td>
+                <td class="otherNodes">
+                    <div>Restoration (80c / 10s)</div>
+                </td>
+            </tr>
+            <tr class="hackingDifficultyRow">
+                <td class="hackingDifficulty">Hardest</td>
+                <td class="systemCoreStrength">90c / 10s</td>
+                <td class="antiVirusStrength">60c / 40s</td>
+                <td class="firewallStrength">90c / 20s</td>
+                <td class="otherNodes">
+                    <div>Virus Suppressor (60c / 15s)</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+
+</html>

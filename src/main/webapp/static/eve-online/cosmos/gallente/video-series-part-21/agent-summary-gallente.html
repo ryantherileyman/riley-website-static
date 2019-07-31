@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eve Online - Gallente Cosmos Agents in Algintal</title>
+    
+    <style type="text/css">
+        body {
+            background-color: #090909;
+        }
+        body h2 {
+            font-family: "Cambria", "Times New Roman", serif;
+            color: #CCCC33;
+        }
+        
+        div.localNavigation ul {
+            list-style: none;
+            color: #DDDDDD;
+            background-color: #292929;
+            text-align: center;
+            border-bottom: 1px solid #999999;
+        }
+        div.localNavigation li.navigationHeader {
+            margin-right: 2em;
+        }
+        div.localNavigation li {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 2em;
+            height: 2em;
+            margin: 0px;
+        }
+        div.localNavigation a {
+            display: block;
+            text-decoration: none;
+            color: #CCCC33;
+            padding: 0em 1em;
+            transition: 0.5s background-color;
+        }
+        div.localNavigation a:hover {
+            background-color: #494949;
+        }
+        div.localNavigation a.active {
+            background-color: #DFDFDF;
+            color: #6666CC;
+        }
+        
+        @media screen and (min-width: 640px) {
+            div.localNavigation li {
+                display: inline-block;
+            }
+        }
+        
+        table.cosmosAgentTable {
+            border: 1px solid black;
+            width: 100%;
+            font-family: Calibri, Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #DDDDDD;
+        }
+        table.cosmosAgentTable th,
+        table.cosmosAgentTable td {
+            border: 1px solid grey;
+            padding: 0.1em 0.25em;
+            vertical-align: top;
+        }
+        table.cosmosAgentTable tr.currentAgentRow {
+            background-color: #2E2E1E;
+        }
+        table.cosmosAgentTable td.agentLevel {
+            text-align: center;
+        }
+        table.cosmosAgentTable tr.factionRow th {
+            padding-top: 0.75em;
+            text-align: center;
+            font-size: 16pt;
+            color: #CCCC33;
+        }
+        table.cosmosAgentTable a.videoLink {
+            color: #CCCC33;
+        }
+        table.cosmosAgentTable a.videoLink:hover {
+            color: #EEEE99
+        }
+        div.agentName {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Algintal Constellation - Gallente Cosmos Agents</h2>
+
+    <div class="localNavigation">
+        <ul>
+            <li class="navigationHeader">Gallente Cosmos:</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beacon-summary.html">Beacons and Sites</a></li>
+            <li><a href="agent-summary-data-centers.html">Data Center Agents</a></li>
+            <li><a class="active" href="javascript:void(0);">Gallente Agents</a></li>
+            <li><a href="agent-summary-others.html">Non-Gallente Agents</a></li>
+            <li><a href="hacking-containers.html">Hacking Containers</a></li>
+        </ul>
+    </div>
+
+    <table class="cosmosAgentTable">
+        <thead>
+            <tr class="factionRow">
+                <th colspan="8">Gallente Federation</td>
+            </tr>
+            <tr>
+                <th class="agent">Agent</th>
+                <th class="agentLevel">Level</th>
+                <th class="agentType">Type</th>
+                <th class="missionRequirements">Requirements</th>
+                <th class="solarSystem">Solar System</th>
+                <th class="systemLocation">Location</th>
+                <th class="missionName">Mission Name</th>
+                <th class="rewards">Rewards</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Jannegiers Estacan</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">1</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Standings: None</div>
+                    <div class="itemRequirements">Item: 100 Fertilizer</div>
+                </td>
+                <td class="solarSystem">Audaerne</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Natura Seminary</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=A_xZmF1ELzI" target="_blank">Activist Fuel</a> (4 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Beatnik' Small Remote Armor Repairer Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.012 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Pandon Ardilan</div>
+                    <div class="corporation">The Scope</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                </td>
+                <td class="solarSystem">Barmalie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Ebony Tower</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=gq41ZO5MjQ8" target="_blank">On the Trail</a> (4 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">FON Strike Scene Evidence</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.031 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Preaux Gallot</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                    <div class="itemRequirements">FON Strike Scene Evidence</div>
+                </td>
+                <td class="solarSystem">Audaerne</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Natura Seminary</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=1WNfQZGf0gY" target="_blank">A Storm Brewing</a> (6 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Aura' Warp Core Stabilizer Blueprint</div>
+                    <div class="itemReward">'Pacifier' Large Remote Armor Repairer Blueprint</div>
+                    <div class="itemReward">Preaux's Letter</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.065 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Ystvia Lamuette</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                    <div class="itemRequirements">Preaux's Letter</div>
+                </td>
+                <td class="solarSystem">Barmalie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Ebony Tower</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=hL_W7PhdV2s" target="_blank">Uproot</a> (5 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward"><span style="text-decoration: line-through;">'Entrepreneur'</span>'Bootleg' Remote Sensor Booster Blueprint</div>
+                    <div class="itemReward">'Investor' Tracking Disruptor Blueprint</div>
+                    <div class="itemReward">'Marketeer' Tracking Computer Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.021 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Ardoen Dasaner</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">2</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 2</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Grand Future Information Center</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=lDLPUfokAa0" target="_blank">Tourist Run</a> (3 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Bootleg' Remote Sensor Booster Blueprint</div>
+                    <div class="itemReward">'Dealer' Light Ion Blaster Blueprint</div>
+                    <div class="itemReward">Limited Neural Boost - Beta (+2 Willpower)</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.101 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Nilla Elermare</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Contested Gallente Roden Shipyard's Outpost</div>
+                    <div>Entry Gate</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=W_HS1dtiXpg" target="_blank">Rescue Isone Flosin</a> (1 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">Isone Flosin's DNA</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.633 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Aminn Flosin</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                    <div class="itemRequirements">Item: Isone Flosin's DNA</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Central Administration</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=cBWYFq_LzzM" target="_blank">Revenge is Sweet</a> (4 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Enterprise' Remote Tracking Computer Blueprint</div>
+                    <div class="itemReward">2x 'Hustler' Heavy Neutron Blaster</div>
+                    <div class="itemReward">Social Adaptation Chip - Standard (+4 Charisma)</div>
+                    <div class="itemReward">Zainou 'Deadeye' Sharpshooter ST-903 (+3% Optimal Range)</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.408 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Onreun Coen</div>
+                    <div class="corporation">Federal Intelligence Office</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                    <div class="itemRequirements">Serpentis Data Chip (from Pourpas Aunten)</div>
+                    <div class="itemRequirements">Maqeri Camcen's DNA</div>
+                </td>
+                <td class="solarSystem">Fluekele</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Central Administration</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=S52Zxub54Cg" target="_blank">Federal Inspection</a> (5 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Corporate' Light Electron Blaster Blueprint</div>
+                    <div class="itemReward">'Marketeer' Tracking Computer Blueprint</div>
+                    <div class="itemReward">'Executive' Remote Sensor Dampener Blueprint</div>
+                    <div class="itemReward">Memory Augmentation - Basic (+3 Memory)</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.220 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Astroo Opeau</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                </td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Arid Park</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=A6chpaZM8tU" target="_blank">The Power of Information</a> (3 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Boss' Remote Sensor Booster Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.044 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Schabs Xalot</div>
+                    <div class="corporation">Roden Shipyards</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Mining</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                    <div class="itemRequirements">Item: 4700 Dense Veldspar</div>
+                    <div class="itemRequirements">Item: 2000 Omber</div>
+                </td>
+                <td class="solarSystem">Colelie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Survey Station</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=8oMG2xYQmzw" target="_blank">Ore Harvesting</a> (3 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Distributor' Guidance Disruptor Blueprint</div>
+                    <div class="itemReward">Memory Augmentation - Basic</div>
+                    <div class="itemReward">2x 'Meditation' Medium Armor Repairer</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.236 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Sebast Mathon</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">3</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 4</div>
+                    <div class="itemRequirements">Item: Threaded Waypoint Map</div>
+                    <div class="itemRequirements">Item: Yan Jung Micro Processor</div>
+                    <div class="itemRequirements">Item: Binary Transpositional Code</div>
+                </td>
+                <td class="solarSystem">Deltole</td>
+                <td class="systemLocation">
+                    <div>Signature JTD-372:  Yan Jung Ruins</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=rA1O3WSqgeM" target="_blank">Path to Enlightenment</a> (3 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">Zainou 'Gnome' Shield Upgrades SU-603 (3% shield power grid)</div>
+                    <div class="itemReward">'Natura' Warp Core Stabilizer Blueprint</div>
+                    <div class="itemReward">Yan Jung Technology Skill Book</div>
+                    <div class="itemReward">Passkey to Yan Jung Relic Site</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.165 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Croir Arghe</div>
+                    <div class="corporation">Caille University</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Distribution</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6</div>
+                </td>
+                <td class="solarSystem">Alsottobier</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Arid Park</div>
+                </td>
+                <td class="missionName">
+                    <div><a class="videoLink" href="https://www.youtube.com/watch?v=4sA_06BIZTE" target="_blank">Fanning the Flames</a> (3 in chain)</div>
+                </td>
+                <td class="rewards">
+                    <div class="itemReward">'Natura' Warp Core Stabilizer Blueprint</div>
+                    <div class="itemReward">'Executive' Remote Sensor Dampener Blueprint</div>
+                    <div class="itemReward">'Love' Medium Remote Armour Repairer Blueprint</div>
+                    <div class="factionStandingsReward">Gallente Federation: 0.173 *</div>
+                </td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Ampsin Achippon</div>
+                    <div class="corporation">Combined Harvest</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Mining</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6</div>
+                </td>
+                <td class="solarSystem">Colelie</td>
+                <td class="systemLocation">
+                    <div>Beacon:  Contested Gallente Azure Chasm</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Babalu Wrezka</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Jordan Usquen</div>
+                    <div class="corporation">Federation Navy</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+            <tr class="agentRow">
+                <td class="agent">
+                    <div class="agentName">Timmothy Sawyr</div>
+                    <div class="corporation">Senate Bureau</div>
+                </td>
+                <td class="agentLevel">4</td>
+                <td class="agentType">Security</td>
+                <td class="missionRequirements">
+                    <div class="standingsRequirements">Faction Standings: 6?</div>
+                </td>
+                <td class="solarSystem">Jolia</td>
+                <td class="systemLocation">
+                    <div>Stargate:  Augnais</div>
+                </td>
+                <td class="missionName">TBD</td>
+                <td class="rewards">TBD</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">
+                    * Faction standings gains are based on your character's Social skill at the time of mission chain completion.
+                    The gains listed in this chart are for an Alpha character with Social trained to level 3 (level 1 through 3 agents) or level 4 (level 4 agents).
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+
+</html>
